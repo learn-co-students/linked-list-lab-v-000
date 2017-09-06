@@ -45,11 +45,11 @@ function insertNodeAt(index, newNode, head, collection) {
   }
 }
 
-function deleteNodeAt(index, head, collection) {
+function deleteNode(index, head, collection) {
   if (index > 0) {
     let previousNode = nodeAt(index - 1, head, collection)
-    previousNode.next = next(previousNode, collection).next
+    previousNode.next = next(previousNode, collection)
   } else {
-    nodeAt(index, head, collection).next = null
+    head = nodeAt(index + 1, head, collection)
   }
 }
