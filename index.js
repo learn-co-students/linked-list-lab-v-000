@@ -54,8 +54,5 @@ function insertNodeAt(index, address, linkedList, collection){
 }
 
 function deleteNodeAt(index, linkedList, collection){
-  debugger
- return nodeAt(index - 1, linkedList, collection)["next"] = addressAt(index + 1, linkedList, collection)
-
-
+  return nodeAt(index - 1, linkedList, collection)["next"] = addressAt(index + 1, linkedList, collection)
 }
