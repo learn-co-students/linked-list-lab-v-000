@@ -6,8 +6,8 @@ function headNode(linkedList, collection) {
   return collection[linkedList]
 }
 
-function next(head, collection) {
-  return collection[head.next]
+function next(node, collection) {
+  return collection[node.next]
 }
 
 function nodeAt(index, linkedList, collection) {
