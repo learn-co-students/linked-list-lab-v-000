@@ -20,9 +20,9 @@ function nodeAt(index, linkedList, collection) {
 
 function addressAt(index, linkedList, collection) {
   if (index === 0) {
-    return linkedList
+    return linkedList;
   } else {
-    return nodeAt(index - 1, linkedList, collection).next
+    return nodeAt(index - 1, linkedList, collection).next;
   }
 }
 
