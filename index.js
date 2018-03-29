@@ -39,7 +39,7 @@ function indexAt(nodeName, collection, linkedList) {
 }
 
 function insertNodeAt(pos, newNode, linkedList, collection) {
-  let prevNode = {}
+  let prevNode
   if (pos === 0) {
     prevNode = collection[linkedList];
   } else {
@@ -51,13 +51,11 @@ function insertNodeAt(pos, newNode, linkedList, collection) {
 }
 
 function deleteNodeAt(pos, linkedList, collection) {
-  let deleteNode = nodeAt(pos, linkedList, collection)
-  if (pos === 0) {
-    let node = collection[linkedList]
-    node.next = ""
-    linkedList = collection[linkedList].next
-  } else {
-    let prevNode = nodeAt(pos-1, linkedList, collection)
-    prevNode.next = deleteNode.next
+  let prevNode;
+  let currentNode = collection[linkedList]
+  for (let i = 0; i < pos; i++) {
+    prevNode = currentNode
+    currentNode = next(currentNode, collection)
   }
+  prevNode.next = currentNode.next
 }
