@@ -67,3 +67,5 @@ function deleteNodeAt(index, linkedList, collection){
 	};
 	prevNode.next = currentNode.next;
 };
+
+https://jsbin.com/zaseqimiqa/1/edit?js,output
