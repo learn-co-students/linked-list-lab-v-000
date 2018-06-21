@@ -54,25 +54,3 @@ function deleteNodeAt(index, linkedList, collection){
   collection[previousAddress]['next'] = nextAddress
   delete collection[address]
 }
-
-// let collection = {
-//   rnadnm: {name: 'Alexandra', next: 'masjdrandm'},
-//   masjdrandm: {name: 'Kirstin', next: 'ntrandm'},
-//   ntrandm: {name: 'Juliet', next: null}
-// }
-//
-// let head = collection['rnadnm'];
-//
-// function next(node){
-//   let nextAddress = node['next']
-//   return collection[nextAddress]
-// }
-//
-// function indexAt(head, index){
-//   let node = head;
-//   for(i = 0; i < index; i++){
-//      node = next(node);
-//   }
-//
-//   return node;
-// }
