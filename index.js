@@ -25,3 +25,13 @@ function addressAt(index, head, collection) {
     let newNode = nodeAt(index - 1, head, collection)
     return newNode.next
 }
+
+function indexAt(node, collection, headAddress) {
+    let currentNode = headNode(headAddress, collection);
+    let index = 0;
+    while(currentNode != node) {
+        currentNode = next(currentNode, collection)
+        index ++
+    }
+    return index;
+}
