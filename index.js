@@ -1,3 +1,4 @@
+// let node = {name: 'Susie'}
 function getName(node) {
   return node.name;
 }
