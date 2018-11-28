@@ -17,9 +17,50 @@
   }
   
   function next(node, collection) {
-    return collection[node["next"]]
+    return collection[node["next"]];
   }
   
   function nodeAt(index, linkedList, collection) {
-    
+    let node = collection[linkedList]
+    let i;
+    for (i = 0; i < index; i++) {
+      node = next(node, collection)
+    }
+    return node
   }
+  
+  function getKeyByValue(object, value) {
+    return Object.keys(object).find(key => object[key] === value);
+  }
+    
+  function addressAt(index, linkedList, collection){
+    let node = nodeAt(index, linkedList, collection)
+    return getKeyByValue(collection, node);
+  }
+  
+  function indexAt(node, collection, linkedList) {
+    let currentNode = collection[linkedList];
+    let index = 0;
+    if (currentNode !== node) {
+      currentNode = next(node, collection);
+      index ++;
+    }
+    return index;
+  }
+  
+function insertNodeAt(index, newNodeAddress, linkedList, collection){
+  let previousNode = nodeAt(index - 1, linkedList, collection)
+  let subsequentNodeAddress = addressAt(index, linkedList, collection)
+  
+  previousNode.next = newNodeAddress
+  let newNode = collection[newNodeAddress]
+  newNode.next = subsequentNodeAddress
+}
+
+function deleteNodeAt(index, linkedList, collection) {
+  let previousNode = nodeAt(index - 1, linkedList, collection)
+  let nextNodeAddress = addressAt(index + 1, linkedList, collection)
+  
+  previousNode.next = nextNodeAddress
+}
+
