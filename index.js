@@ -12,11 +12,22 @@ function headNode(linkedList, collection) {
   return collection[linkedList];
 }
 
-function indexAt(head, index) {
-  let node = head;
-  for (i = 0; i < index; i++) {
-     node = next(node);
-  }
+function nodeAt(index, linkedList, collection) {
+  let node = headNode(linkedList, collection);
+  //let head = node;
+
+  for (let i = 0; i < index; i++) {
+     node = next(node, collection);
+   }
 
   return node;
+}
+
+function addressAt(index, linkedList, collection) {
+  if (index === 0) {
+    return linkedList;
+  } else {
+    let previousNode = nodeAt(index - 1, linkedList, collection);
+    return previousNode.next;
+  }
 }
