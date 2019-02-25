@@ -11,6 +11,9 @@ function headNode(linkedList, collection) {
   return collection[linkedList]
 }
 
-function next() {
-  
+function next(head, collection) {
+  var addresses = Object.keys(collection)
+  if (head == collection[addresses[addresses.length - 1]]) {
+    return collection[addresses[0]]
+  }
 }
