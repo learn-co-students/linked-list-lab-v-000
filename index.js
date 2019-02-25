@@ -33,4 +33,5 @@ function nodeAt(index, linkedList, collection) {
 
 function addressAt(index, linkedList, collection) {
   let node = nodeAt(index, linkedList, collection)
+  return Object.keys(collection).find(address => collection[address] == node)
 }
