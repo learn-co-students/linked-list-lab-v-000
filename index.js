@@ -31,6 +31,6 @@ function nodeAt(index, linkedList, collection) {
   return currentNode
 }
 
-function addressesAt() {
-  
+function addressAt(index, linkedList, collection) {
+  let node = nodeAt(index, linkedList, collection)
 }
