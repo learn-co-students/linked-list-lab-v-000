@@ -1,8 +1,3 @@
-let collection = {rnadnm: {name: 'Alexandra', next: 'masjdrandm'},
-masjdrandm: {name: 'Kirstin', next: 'ntrandm'}, 
-ntrandm: {name: 'Juliet', next: null}
-}
-
 function getName(node) {
   return node.name
 }
@@ -13,10 +8,11 @@ function headNode(linkedList, collection) {
 
 function next(head, collection) {
   var addresses = Object.keys(collection)
-  if (head == collection[addresses[addresses.length - 1]]) {
+  var lastIndex = addresses.length - 1
+  if (head == collection[addresses[lastIndex]]) {
     return collection[addresses[0]]
   } else {
-    for (var i = 0; i <= addresses.length - 1; i++) {
+    for (var i = 0; i <= lastIndex; i++) {
       if (collection[addresses[i]] == head) {
         return collection[addresses[i + 1]]
       }
