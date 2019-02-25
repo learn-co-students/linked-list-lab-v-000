@@ -3,6 +3,6 @@ masjdrandm: {name: 'Kirstin', next: 'ntrandm'},
 ntrandm: {name: 'Juliet', next: null}
 }
 
-function getName() {
-  
+function getName(node) {
+  return node.name
 }
