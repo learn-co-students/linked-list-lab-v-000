@@ -19,3 +19,7 @@ function next(head, collection) {
     }
   }
 }
+
+function nodeAt() {
+  
+}
