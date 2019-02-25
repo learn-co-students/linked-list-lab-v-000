@@ -15,5 +15,11 @@ function next(head, collection) {
   var addresses = Object.keys(collection)
   if (head == collection[addresses[addresses.length - 1]]) {
     return collection[addresses[0]]
+  } else {
+    for (var i = 0; i <= addresses.length - 1; i++) {
+      if (collection[addresses[i]] == head) {
+        return collection[addresses[i + 1]]
+      }
+    }
   }
 }
