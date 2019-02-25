@@ -45,3 +45,7 @@ function indexAt(node, collection, linkedList) {
   }
   return currentIndex
 }
+
+function insertNodeAt() {
+  
+}
