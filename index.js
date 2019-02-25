@@ -6,3 +6,7 @@ ntrandm: {name: 'Juliet', next: null}
 function getName(node) {
   return node.name
 }
+
+function headNode() {
+  
+}
