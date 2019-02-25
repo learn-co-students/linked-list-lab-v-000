@@ -10,3 +10,7 @@ function getName(node) {
 function headNode(linkedList, collection) {
   return collection[linkedList]
 }
+
+function next() {
+  
+}
