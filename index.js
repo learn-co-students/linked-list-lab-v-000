@@ -54,6 +54,6 @@ function insertNodeAt(index, newAddress, linkedList, collection) {
   collection[newAddress].next = rightAddress
 }
 
-function deleteNodeAt() {
-  
+function deleteNodeAt(index, linkedList, collection) {
+
 }
