@@ -55,5 +55,11 @@ function insertNodeAt(index, newAddress, linkedList, collection) {
 }
 
 function deleteNodeAt(index, linkedList, collection) {
+  const addressToDelete = addressAt(index, linkedList, collection)
+  const leftNode = nodeAt(index - 1, linkedList, collection)
+  const rightAddress = addressAt(index + 1, linkedList, collection)
 
+  leftNode.next = rightAddress
+  delete collection[addressToDelete]
+  
 }
