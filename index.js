@@ -42,7 +42,7 @@ function indexAt(node, collection, linkedList){
 
 function insertNodeAt(newNodeIndex, newNodeAddress, linkedList, collection){
   let nodeBeforeNew = nodeAt(newNodeIndex-1, linkedList, collection)
-  let nodwAfterNew = nodeAt(newNodeIndex, linkedList, collection)
+  let nodeAfterNew = nodeAt(newNodeIndex, linkedList, collection)
 
   let nodeBeforeNewIndex = indexAt(nodeBeforeNew, collection, linkedList)
   let nodeAfterNewIndex = indexAt(nodeAfterNew, collection, linkedList)
@@ -51,5 +51,14 @@ function insertNodeAt(newNodeIndex, newNodeAddress, linkedList, collection){
   nodeBeforeNew.next = newNodeAddress
   let newNode = collection[newNodeAddress]
   newNode.next = nodeAfterNewAddress
+}
 
+function deleteNodeAt(index, linkedList, collection){
+  let nodeBefore;
+  let currentNode = headNode(linkedList, collection);
+  for(let i = 0; i < index; i++){
+     nodeBefore = currentNode
+     currentNode = next(currentNode, collection);
+  }
+  nodeBefore.next = currentNode.next
 }
