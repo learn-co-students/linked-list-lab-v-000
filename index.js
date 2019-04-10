@@ -19,3 +19,23 @@ function nodeAt(index, linkedList, collection) {
   }
   return currentNode
 }
+
+
+function addressAt(index, linkedList, collection) {
+  if (index == 0) {
+    return linkedList
+  } else {
+    let node = nodeAt(index-1, linkedList, collection)
+    return node.next
+  }
+}
+
+function indexAt(node, collection, linkedList) {
+  let currentNode = headNode(linkedList, collection)
+  let currentIndex = 0
+  while(currentNode != node) {
+    currentIndex++
+    currentNode = next(currentNode, collection)
+  }
+  return currentIndex
+}
