@@ -27,6 +27,20 @@ function addressAt(num, linkedList, collection) {
   }
 }
 
-function indexAt() {
+function indexAt(node, collection, linkedList) {
+  let selectedNode
+  for (let i = 0; i < Object.keys(collection).length; i++) {
+    if (nodeAt(i, linkedList, collection) === node) {
+      selectedNode = i
+    }
+  }
+  return selectedNode
+}
 
+function insertNodeAt(num, newNode, linkedList, collection) {
+  let node = headNode(newNode, collection)
+  let prevNode = nodeAt(num - 1, linkedList, collection)
+  let nextAddress = addressAt(num, linkedList, collection)
+  prevNode.next = newNode
+  node.next = nextAddress
 }
