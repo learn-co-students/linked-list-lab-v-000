@@ -118,10 +118,12 @@ describe('#insertNodeAt', function() {
     let secondNode = {name: 'sam', next: 'asnan'}
     let newNode = {name: 'jill', next: ''}
     let lastNode = {name: 'charlie', next: null}
-    let collection = {rkjasj: secondNode,
-      asnan: lastNode,
+    let collection = {
       whana: firstNode,
-      ajhsak: newNode}
+      rkjasj: secondNode,
+      asnan: lastNode,
+      ajhsak: newNode
+    }
     let linkedList = 'whana'
 
     insertNodeAt(1, 'ajhsak', linkedList, collection)
