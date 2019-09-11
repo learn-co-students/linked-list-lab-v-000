@@ -32,3 +32,13 @@ function addressAt(index, head, collection){
 
     return nodeAddress;
 }
+
+function indexAt(node, collection, head){
+    let currentNode = collection[head];
+    let i; 
+    for(i = 0; currentNode !== node; i++){
+        currentNode = next(currentNode, collection);
+    }
+
+    return i;
+}
