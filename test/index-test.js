@@ -161,3 +161,9 @@ describe('#deleteNodeAt', function() {
 
   });
 })
+
+//
+// var firstNode = {name: 'susie', next: 'rkjasj'}
+// var secondNode = {name: 'sam', next: 'asnan'}
+// var lastNode = {name: 'charlie', next: null}
+// var collection = {rkjasj: secondNode, asnan: lastNode, whana: firstNode}
